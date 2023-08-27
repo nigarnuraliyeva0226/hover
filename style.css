@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    color: white;
+    counter-set: count;
+    margin: 30px 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: darkred;
+}
+
+input {
+    display: none;
+
+}
+h2{
+    margin-top: 20px;
+}
+label {
+border: 2px solid white;
+background-color: orangered;
+margin: 0px 15px;
+padding-top: 10px;
+padding-left: 10px;
+padding-bottom:10px ;
+padding-right: 10px;
+color: white;
+}
+
+label:hover {
+    transition: 05s;
+    background-color: blueviolet;
+    cursor: pointer;
+}
+input:checked + label {
+    background-color: white;
+    counter-increment: count;
+    border: 1px orangered solid;
+    color: orangered;
+   
+}
+
+h2::after{
+    content: counter(count);
+}
